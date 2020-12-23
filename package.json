@@ -1,0 +1,27 @@
+{
+  "name": "cdn-tool",
+  "version": "1.0.0",
+  "description": "upload files to cdn",
+  "main": "index.js",
+  "bin": {
+    "cdn": "./bin/cdn"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cdn",
+    "cos",
+    "upload"
+  ],
+  "author": "daxierhao",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "cos-nodejs-sdk-v5": "^2.8.2",
+    "ora": "^5.1.0",
+    "request": "^2.88.2",
+    "walk": "^2.3.14"
+  }
+}

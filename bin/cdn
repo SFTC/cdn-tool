@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+
+const chalk = require('chalk')
+
+const index = require('../index');
+
+const package = require('../package.json')
+
+// 使用commander
+program
+  .version(package.version)
+
+program
+  .command('upload')
+  .description(chalk.gray('upload project'))
+  .action((deployfile = 'deploy.js') => {
+    // console.log(deployfile);
+    index();
+  })
+
+program.on('--help', () => {
+  console.log()
+  console.log('  Examples:')
+  console.log()
+  console.log('    $ cdn upload')
+})
+
+program.parse(process.argv)
