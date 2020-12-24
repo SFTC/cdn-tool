@@ -2,7 +2,7 @@
 
 cdn小工具用于项目中快速上传cdn服务的小工具，暂时只支持cos
 
-![流程图](http://iuap-tenat-market.oss-cn-beijing.aliyuncs.com/cpblog/blogpic/js/node/node-cli/upload-file.png)
+![流程图](//iuap-tenat-market.oss-cn-beijing.aliyuncs.com/cpblog/blogpic/js/node/node-cli/upload-file.png)
 
 ### 安装
 
