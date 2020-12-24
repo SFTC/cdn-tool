@@ -38,4 +38,6 @@ npm i cdn-tool -g
 }
 ```
 
-*** 的配置详情请看![cos官网](https://cloud.tencent.com/product/cos)购买之后会有(或者找op要)
+`***`的配置详情请看[cos官网](https://cloud.tencent.com/product/cos)购买之后会有(或者找op要)
+
+终端执行`cdn upload`上传
