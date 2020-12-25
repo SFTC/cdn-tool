@@ -15,8 +15,7 @@ program
 program
   .command('upload')
   .description(chalk.gray('upload project'))
-  .action((deployfile = 'deploy.js') => {
-    // console.log(deployfile);
+  .action(() => {
     index();
   })
 

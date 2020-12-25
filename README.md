@@ -18,8 +18,10 @@ npm i cdn-tool -g
 
 ```
 {
+  "region": "***", // region和授权地址一致，cos购买之后有
+  "bucket": "***", // bucket和授权地址一致，cos购买之后有
   "prefix": "fe-knight",  // 上传到cdn中前缀文件目录
-  "excludeDir": "exclude-dir", // 上传目录中不需要上传的文件夹
+  "excludeDir": ["exclude-dir"], // 上传目录中不需要上传的文件夹
   "rootPath": "./dist", // 需要上传的文件夹必传
   "requestUrl": "请求cos授权地址(需要自己搭建)"
 }
@@ -30,7 +32,7 @@ npm i cdn-tool -g
 ```
 {
   "prefix": "fe-knight",  // 上传到cdn中前缀文件目录
-  "excludeDir": "exclude-dir", // 上传目录中不需要上传的文件夹
+  "excludeDir": ["exclude-dir"], // 上传目录中不需要上传的文件夹
   "rootPath": "./dist", // 需要上传的文件夹必传
   "region": "***",
   "bucket": "***",

@@ -22,19 +22,24 @@ module.exports = () => {
       }
     }
     (() => {
-      let walker  = walk.walk('./dist', {
+      let walker  = walk.walk(CONFIG.rootPath, {
         followLinks: false
       })
       let files = []
       walker.on('file', function(root, stat, next) {
-        if (CONFIG.excludeDir && root.indexOf(`${CONFIG.rootPath}/${CONFIG.excludeDir}`) > -1) {
-          next();
-          return;
+        if (CONFIG.excludeDir && Array.isArray(CONFIG.excludeDir)) {
+          for (let i = 0; i < CONFIG.excludeDir.length; i++) {
+            const exclude = CONFIG.excludeDir[i];
+            if (root.indexOf(`${CONFIG.rootPath}/${exclude}`) > -1) {
+              next();
+              return
+            }
+          }
         }
+        const result = root.replace(CONFIG.rootPath, '').slice(1);
         files.push({
           getPath: root + '/' + stat.name,
-          putPath: stat.name,
-          rootPath: root
+          putPath: `/${CONFIG.prefix}/${result.length > 0 ? result + '/' : ''}${stat.name}`
         });
         next();
       });
