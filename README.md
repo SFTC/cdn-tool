@@ -14,7 +14,7 @@ npm i cdn-tool -g
 
 在需要上传的文件中，新建`deploy-config.json`文件
 
-方法1(没有cos密钥):
+方法1(没有cos密钥)(推荐):
 
 ```
 {
